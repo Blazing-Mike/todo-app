@@ -1,0 +1,28 @@
+.todo-header {
+    height: 15rem;
+    background: url("/images/bg-mobile-light.jpg") no-repeat center;
+    background-size: cover;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px 20px;
+      padding-top: 2rem;
+  
+      .logo {
+        font-size: 2rem;
+        color: hsl(0, 0%, 98%);
+        letter-spacing: 5px;
+      }
+    }
+    .switch-theme{
+      background: inherit;
+      border: transparent;
+    }
+    img {
+      width: 1.6rem;
+    }
+  
+   
+  }
+  

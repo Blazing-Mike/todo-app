@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  background: hsl(236, 33%, 92%);
+}
+
+li {
+  list-style: none;
+}
+
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2rem;
+}
+.todo-container {
+  width: 25rem;
+  font-weight: normal;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 10px 0;
+  border-radius: 10px;
+  min-height: 15rem;
+
+  .todo-item__container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+    padding: 20px;
+
+    .left {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      .strike {
+   text-decoration: line-through;
+}
+
+        li{
+            margin-top: 5px;
+        }
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+      }
+      
+      /* Hide the browser's default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 28px;
+        width: 28px;
+        background-color: #eee;
+        border: 1px  solid black;
+        border-radius: 15px;
+      }
+      
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+        background-color: inherit;
+      }
+      
+      /* When the checkbox is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+        background-image: linear-gradient(to right, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+      }
+      
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+      /* Show the checkmark when checked */
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+      
+      /* Style the checkmark/indicator */
+      .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+.delete-button{
+    background: inherit;
+    border: transparent;
+}
+  }
+
+  .todo-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    color:hsl(236, 9%, 61%);
+
+    p{
+        font-size: 0.8rem;
+    }
+
+    .clear-todo{
+        border: transparent;
+        background: inherit;
+        color:hsl(236, 9%, 61%);
+        font-size: 1.1rem;
+        font-family: "Josefin Sans", sans-serif;
+
+    }
+  }
+}
+
+.todo-container__notodo{
+  margin: auto;
+
+}
+
+footer{
+  background:hsl(0, 0%, 98%) ;
+  margin:1rem  auto;
+  padding: 1.4rem;
+  width: 25rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 10px;
+
+  .transparent{
+    background: inherit;
+    border: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: hsl(236, 9%, 61%);
+    font-family: "Josefin Sans", sans-serif;;
+
+    
+  }
+
+}
+.active{
+  display: block;
+}
+.inactive{
+  display: none;
+}

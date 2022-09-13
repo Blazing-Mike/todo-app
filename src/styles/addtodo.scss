@@ -1,0 +1,27 @@
+.add-todo__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -8rem;
+    margin-bottom: 4rem;
+    .add-todo__form{
+
+    .add-todo__input{
+        color: hsl(236, 9%, 61%);
+        font-weight: 600;
+        font-size: 0.9rem;
+        width: 25rem;
+        height: 4rem;
+        padding: 10px;
+        border: transparent;
+        border-radius: 10px;
+        outline: none;
+
+        ::placeholder{
+            color: hsl(233, 11%, 84%);
+            font-weight: 500;
+        }
+    }
+}
+}
